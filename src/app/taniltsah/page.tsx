@@ -56,7 +56,7 @@ export default function Home() {
                 </DialogTrigger>
                 <DialogContent>
                   <DialogHeader>
-                    <DialogTitle>Are you absolutely sure?</DialogTitle>
+                    <DialogTitle className="text-3xl">{f.title}</DialogTitle>
                     <DialogDescription>
                       This action cannot be undone. This will permanently delete
                       your account and remove your data from our servers.
