@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { img } from 'framer-motion/client'
 import { useEffect } from 'react'
 
 export default function PresentationPage() {
@@ -10,30 +11,36 @@ export default function PresentationPage() {
   const Array = [
     {
       name: 'Б. Наранцогт',
+      img: 'https://res.cloudinary.com/docvcxodh/image/upload/v1754540935/untitled-90_hkhbo0.jpg',
     },
     {
       name: 'Н. Гүндсамба',
+      img: 'https://res.cloudinary.com/docvcxodh/image/upload/v1754540937/untitled-112_f0nclf.jpg',
     },
     {
       name: 'Г. Хувьтөгөлдөр',
+      img: 'https://res.cloudinary.com/docvcxodh/image/upload/f_auto/IMG_4793_wn6ktx.heic',
     },
     {
       name: 'С. Одгараг',
+      img: 'https://res.cloudinary.com/docvcxodh/image/upload/v1754540540/a4bb8c0f-d3e0-45d7-9148-4445a6572334_marpcs.jpg',
     },
     {
       name: 'Т. Бумбарай',
+      img: 'https://res.cloudinary.com/docvcxodh/image/upload/v1754540938/untitled-108_t98coi.jpg',
     },
     {
       name: 'М. Эрдэнэсувд',
+      img: 'https://res.cloudinary.com/docvcxodh/image/upload/v1754540937/untitled-94_qilhob.jpg',
     },
     {
       name: 'Алимаа',
+      img: 'https://res.cloudinary.com/docvcxodh/image/upload/v1754540934/untitled-140_qj2nvi.jpg',
     },
   ]
 
   return (
     <main className="scroll-smooth text-gray-900 bg-white dark:bg-gray-900 dark:text-white">
-      {/* Hero Section */}
       <section className="h-screen flex flex-col justify-center items-center text-center px-4">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
@@ -61,7 +68,6 @@ export default function PresentationPage() {
         </motion.a>
       </section>
 
-      {/* Problem Section */}
       <section
         id="problem"
         className="min-h-screen py-24 px-6 flex flex-col items-center"
@@ -108,7 +114,6 @@ export default function PresentationPage() {
         </motion.ul>
       </section>
 
-      {/* Solution Section */}
       <section
         id="solution"
         className="min-h-screen py-24 px-6 flex flex-col items-center"
@@ -164,7 +169,6 @@ export default function PresentationPage() {
         </motion.a>
       </section>
 
-      {/* Team Section */}
       <section
         id="team"
         className="min-h-screen py-24 px-6 bg-gray-50 dark:bg-gray-900"
@@ -185,7 +189,12 @@ export default function PresentationPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * i }}
             >
-              <div className="w-24 h-24 mx-auto rounded-full bg-gray-300 dark:bg-gray-700 mb-4"></div>
+              <img
+                className="w-24 h-24 mx-auto rounded-full bg-gray-300 dark:bg-gray-700 mb-4"
+                src={_.img}
+                alt={_.name}
+                style={{ objectFit: 'cover' }}
+              />
               <h4 className="font-semibold text-lg">{_.name}</h4>
               <p className="text-sm">Frontend / Backend / UI</p>
             </motion.div>
@@ -200,7 +209,6 @@ export default function PresentationPage() {
         </motion.a>
       </section>
 
-      {/* Demo Section */}
       <section id="demo" className="py-24 px-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
