@@ -12,30 +12,37 @@ export default function PresentationPage() {
     {
       name: 'Б. Наранцогт',
       img: 'https://res.cloudinary.com/docvcxodh/image/upload/v1754540935/untitled-90_hkhbo0.jpg',
+      role: 'Full stack developer',
     },
     {
       name: 'Н. Гүндсамба',
       img: 'https://res.cloudinary.com/docvcxodh/image/upload/v1754540937/untitled-112_f0nclf.jpg',
+      role: 'Full stack developer',
     },
     {
       name: 'Г. Хувьтөгөлдөр',
       img: 'https://res.cloudinary.com/docvcxodh/image/upload/f_auto/IMG_4793_wn6ktx.heic',
+      role: 'Full stack developer',
     },
     {
       name: 'С. Одгараг',
       img: 'https://res.cloudinary.com/docvcxodh/image/upload/v1754540540/a4bb8c0f-d3e0-45d7-9148-4445a6572334_marpcs.jpg',
+      role: 'Full stack developer',
     },
     {
       name: 'Т. Бумбарай',
       img: 'https://res.cloudinary.com/docvcxodh/image/upload/v1754540938/untitled-108_t98coi.jpg',
+      role: 'Full stack developer',
     },
     {
       name: 'М. Эрдэнэсувд',
       img: 'https://res.cloudinary.com/docvcxodh/image/upload/v1754540937/untitled-94_qilhob.jpg',
+      role: 'Full stack developer',
     },
     {
       name: 'Алимаа',
       img: 'https://res.cloudinary.com/docvcxodh/image/upload/v1754540934/untitled-140_qj2nvi.jpg',
+      role: 'Full stack developer',
     },
   ]
 
@@ -178,7 +185,7 @@ export default function PresentationPage() {
           whileInView={{ opacity: 1, y: 0 }}
           className="text-4xl font-bold text-center mb-12 -mt-20"
         >
-          Бидний баг
+          Багын Танилцуулга
         </motion.h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {Array.map((_, i) => (
@@ -196,7 +203,7 @@ export default function PresentationPage() {
                 style={{ objectFit: 'cover' }}
               />
               <h4 className="font-semibold text-lg">{_.name}</h4>
-              <p className="text-sm">Frontend / Backend / UI</p>
+              <p className="text-sm">{_.role}</p>
             </motion.div>
           ))}
         </div>
